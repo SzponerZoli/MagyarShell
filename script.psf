@@ -32498,13 +32498,8 @@ $labelAdatvédelem_Click={
 	#TODO: Place custom script here
 	
 }
-	
-}
-]]></Code>
+	]]></Code>
   <TV>1</TV>
-  <Bookmarks />
-  <BreakPoints />
-  <TracePoints />
   <Mode>1</Mode>
   <Assemblies />
 </File>
