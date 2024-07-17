@@ -5,10 +5,10 @@ sp 'HKCU:\Volatile Environment' 'Edge_Removal' @'
 $also_remove_webview = 1
 
 write-host "`nEdge will be uninstalled."
-write-host "`nALERT: You will NOT be able to reinstall Microsoft Edge after running this script!"
-$uconfirmation = Read-Host "`nContinue? [Y/N]"
+write-host "`nFIGYELEM! A szkript lefuttatása után a rendszer újratelepítéséig az Edge-t nem lehet újtatelepíteni!"
+$uconfirmation = Read-Host "`nFolytatja? [Y/N] Y = igen, N = nem"
 if ($uconfirmation -ne "Y") { exit }
-$host.ui.RawUI.WindowTitle = 'XtremeShell Edge Uninstaller '
+$host.ui.RawUI.WindowTitle = 'XtremeShell Edge Eltávollító szkript'
 ## targets
 $remove_win32 = @("Microsoft Edge","Microsoft Edge Update"); $remove_appx = @("MicrosoftEdge")
 if ($also_remove_webview -eq 1) {$remove_win32 += "Microsoft EdgeWebView"; $remove_appx += "Win32WebViewHost"}
@@ -147,7 +147,7 @@ $@
 $cleanup = gp 'Registry::HKEY_Users\S-1-5-21*\Volatile*' Edge_Removal -ea 0
 if ($cleanup) {rp $cleanup.PSPath Edge_Removal -force -ea 0}
 
-write-host -nonew -fore green -back black "`n EDGE REMOVED!"; 
+write-host -nonew -fore green -back black "`n EDGE ELTÁVOLÍTVA!"; 
 exit
 
 ## ask to run script as admin
