@@ -4,8 +4,8 @@ sp 'HKCU:\Volatile Environment' 'Edge_Removal' @'
 
 $also_remove_webview = 1
 
-write-host "`nEdge will be uninstalled."
-write-host "`nFIGYELEM! A szkript lefuttatása után a rendszer újratelepítéséig az Edge-t nem lehet újtatelepíteni!"
+write-host "`nAz Edge el lesz tavolitva."
+write-host "`nFIGYELEM! A szkript lefuttatasa utan a rendszer ujratelepíteseig az Edge-t nem lehet ujratelepiteni!"
 $uconfirmation = Read-Host "`nFolytatja? [Y/N] Y = igen, N = nem"
 if ($uconfirmation -ne "Y") { exit }
 $host.ui.RawUI.WindowTitle = 'XtremeShell Edge Eltávollító szkript'
