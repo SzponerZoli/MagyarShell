@@ -6,3 +6,5 @@ script.psf.psbuild
 script1.Export.ps1
 script1.psf
 script1.TempPoint.psf
+/bin
+XtremeShell4.1.ps1.psbuild
