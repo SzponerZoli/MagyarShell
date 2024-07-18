@@ -6,7 +6,7 @@ $also_remove_webview = 1
 
 write-host "`nAz Edge el lesz tavolitva."
 write-host "`nFIGYELEM! A szkript lefuttatasa utan a rendszer ujratelepíteseig az Edge-t nem lehet ujratelepiteni!"
-$uconfirmation = Read-Host "`nFolytatja? [Y/N] Y = igen, N = nem"
+$uconfirmation = Read-Host "`nFolytatja? Y = igen, N = nem"
 if ($uconfirmation -ne "Y") { exit }
 $host.ui.RawUI.WindowTitle = 'XtremeShell Edge Eltávollító szkript'
 ## targets
