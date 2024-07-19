@@ -1,2 +1,2 @@
 # XtremeShell
-Free Windows optimizer software.
+Ingyenes Windows optimalizáló szoftver.
