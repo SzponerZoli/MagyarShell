@@ -8,7 +8,7 @@ write-host "`nAz Edge el lesz tavolitva."
 write-host "`nFIGYELEM! A szkript lefuttatasa utan a rendszer ujratelepiteseig az Edge-t nem lehet ujratelepiteni!"
 $uconfirmation = Read-Host "`nFolytatja? Y = igen, N = nem"
 if ($uconfirmation -ne "Y") { exit }
-$host.ui.RawUI.WindowTitle = 'XtremeShell Edge Eltávollító szkript'
+$host.ui.RawUI.WindowTitle = 'XtremeShell Edge Eltávolító szkript'
 ## targets
 $remove_win32 = @("Microsoft Edge","Microsoft Edge Update"); $remove_appx = @("MicrosoftEdge")
 if ($also_remove_webview -eq 1) {$remove_win32 += "Microsoft EdgeWebView"; $remove_appx += "Win32WebViewHost"}
