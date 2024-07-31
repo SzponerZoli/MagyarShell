@@ -1021,13 +1021,13 @@ public static extern int SystemParametersInfo(int uiAction, int uiParam, out STI
 		if ($checkboxCopilot.Checked -eq $true)
 		{
 			$Log.Text = "Kérlek várj..."
-			reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d "0" /f
+			reg add HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot /v "TurnOffWindowsCopilot" /t REG_DWORD /f /d 0
 			$Log.Text = "Copilot engedélyezve"
 		}
 		if ($checkboxCopilot.Checked -eq $false)
 		{
 			$Log.Text = "Kérlek várj..."
-			reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting" /v "Disabled" /t REG_DWORD /d "1" /f
+			reg add HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot /v "TurnOffWindowsCopilot" /t REG_DWORD /f /d 1
 			$Log.Text = "Copilot letiltva"
 		}
 	}
@@ -1099,7 +1099,7 @@ public static extern int SystemParametersInfo(int uiAction, int uiParam, out STI
 	
 	$buttonLegújabbVerzióLetölt_Click = {
 		
-		Start-Process "https://xtremeshell.neonity.hu"
+		Start-Process "https://github.com/SzponerZoli/MagyarShell/releases/latest"
 		
 	}
 	
