@@ -11,6 +11,6 @@ foreach ($key in $remove_keys) {
 }
 
 $IFEO = 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options'
-reg delete "$IFEO\msedge.exe" /f
+#reg delete "$IFEO\msedge.exe" /f
 Write-Host "Visszaallitas befejezve."
 Read-Host "Nyomja meg az Entert a kilepeshez..."
