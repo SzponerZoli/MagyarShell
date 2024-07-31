@@ -14,7 +14,7 @@ reg delete $software /f
   #      reg delete "$root\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$key" /f
    # }
 #}
-$IFEO = 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options'
+#$IFEO = 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options'
 reg delete "$IFEO\ie_to_edge_stub.exe" /f
 reg delete "$IFEO\msedge.exe" /f
 Write-Host "Visszaallitas befejezve."
