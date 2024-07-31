@@ -15,7 +15,7 @@ reg delete $policies /f
    # }
 #}
 #$IFEO = 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options'
-reg delete "$IFEO\ie_to_edge_stub.exe" /f
+#reg delete "$IFEO\ie_to_edge_stub.exe" /f
 reg delete "$IFEO\msedge.exe" /f
 Write-Host "Visszaallitas befejezve."
 Read-Host "Nyomja meg az Entert a kilepeshez..."
