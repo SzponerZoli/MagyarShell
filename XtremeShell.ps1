@@ -1021,13 +1021,13 @@ public static extern int SystemParametersInfo(int uiAction, int uiParam, out STI
 		if ($checkboxCopilot.Checked -eq $true)
 		{
 			$Log.Text = "Kérlek várj..."
-			reg add HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot /v "TurnOffWindowsCopilot" /t REG_DWORD /f /d 0
+			reg add HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot /v "TurnOffWindowsCopilot" /t REG_DWORD /f /d 1
 			$Log.Text = "Copilot engedélyezve"
 		}
 		if ($checkboxCopilot.Checked -eq $false)
 		{
 			$Log.Text = "Kérlek várj..."
-			reg add HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot /v "TurnOffWindowsCopilot" /t REG_DWORD /f /d 1
+			reg delete HKCU\Software\Policies\Microsoft\Windows\WindowsCopilot /f
 			$Log.Text = "Copilot letiltva"
 		}
 	}

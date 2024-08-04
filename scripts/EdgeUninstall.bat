@@ -77,6 +77,7 @@ del "$appdata\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Tombs
 del "$appdata\Microsoft\Internet Explorer\Quick Launch\Microsoft Edge.lnk" -force -ea 0
 del "$desktop\Microsoft Edge.lnk" -force -ea 0
 
+
 ## add OpenWebSearch to redirect microsoft-edge: anti-competitive links to the default browser
 $IFEO = 'HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options'
 $MSEP = ($env:ProgramFiles,${env:ProgramFiles(x86)})[[Environment]::Is64BitOperatingSystem] + '\Microsoft\Edge\Application'
