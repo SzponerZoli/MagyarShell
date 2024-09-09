@@ -273,9 +273,9 @@ function Show-script_psf {
 			$response = $request.GetResponse()
 			if ($response.StatusCode -eq [System.Net.HttpStatusCode]::OK)
 			{
-				$Log.Text = "Edge törlő script letöltése folyamatban..."
-				Invoke-WebRequest -UseBasicParsing https://raw.githubusercontent.com/SzponerZoli/MagyarShell/main/scripts/EdgeUninstall.bat | Invoke-Expression
-				$Log.Text = "Edge törlő script lefutott"
+				$Log.Text = "Edge módosító script letöltése folyamatban..."
+				Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/SzponerZoli/MagyarShell/main/scripts/Chooser.ps1" | Invoke-Expression
+				$Log.Text = "Edge módosító script lefutott"
 			}
 		}
 		catch
@@ -2439,8 +2439,8 @@ A letörölt alkalmazásokat újra lehet telepíteni a Microsoft Store-Ból!')
 	$buttonEdgeTörlése.Name = 'buttonEdgeTörlése'
 	$buttonEdgeTörlése.Size = New-Object System.Drawing.Size(81, 23)
 	$buttonEdgeTörlése.TabIndex = 24
-	$buttonEdgeTörlése.Text = 'Edge törlése'
-	$tooltip1.SetToolTip($buttonEdgeTörlése, 'Microsoft Edge törlése. Ehhez Windows 11-re és internetkapcsolatra lesz szükség.')
+	$buttonEdgeTörlése.Text = 'Edge Módosítása'
+	$tooltip1.SetToolTip($buttonEdgeTörlése, 'Microsoft Edge törlése vagy telepítése. Ehhez Windows 11-re és internetkapcsolatra lesz szükség.')
 	$buttonEdgeTörlése.UseVisualStyleBackColor = $False
 	$buttonEdgeTörlése.add_Click($buttonEdgeTörlése_Click)
 	#
