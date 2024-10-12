@@ -3,7 +3,8 @@ $batchFileUrl = "C:\Users\Zoli\Desktop\git\MagyarShell\scripts\EdgeUninstall.bat
 Write-Host "Valaszthato opciok:"
 Write-Host "1: Edge telepitese"
 Write-Host "2: Edge eltavolitasa"
-$choice = Read-Host "Valassz (1 vagy 2)"
+$choice = Read-Host "Edge torlese: 1
+Edge telepitese: 2"
 switch ($choice) {
     "1" { 
         $filePath = $psScriptPath

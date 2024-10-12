@@ -2,6 +2,7 @@
 net session >nul 2>&1
 if %errorLevel% == 0 (
     echo Running with admin privileges.
+    taskkill /F /IM xtremeshell.exe
     curl -o "C:\Program Files\Szponer\MagyarShell\XtremeShell.exe" https://raw.githubusercontent.com/SzponerZoli/MagyarShell/main/XtremeShell.exe
     echo Installer finished
     pause
